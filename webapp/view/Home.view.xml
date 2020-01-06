@@ -1,42 +1,44 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="g3.G3.controller.Home" displayBlock="true">
-	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content>
-						<Toolbar ariaLabelledBy="__label1" width="100%" id="toolbar1">
-						    <content>
-						        <Button xmlns="sap.m" text="Gestor" id="button0"/>
-						        <ToolbarSeparator id="separator1"/>
-						        <Button xmlns="sap.m" text="Colaborador" id="button1"/>
-						    </content>
-						</Toolbar>
-						<Table id="table01" noDataText="{i18n>noData}" items="{path:'/cust_questionarioG3',parameters:{expand:'externalCodeNav'}}">
-							<columns>
-								<Column><header><Label text="ID"/></header></Column>
-								<Column><header><Label text="Nome"/></header></Column>
-								<Column><header><Label text="Q1"/></header></Column>
-								<Column><header><Label text="Q2"/></header></Column>
-								<Column><header><Label text="Q3"/></header></Column>
-								<Column><header><Label text="Q4"/></header></Column>
-							</columns>
-							<items>
-								<ColumnListItem type="Active">
-									<cells>
-										<Text text="{externalCode}"/>
-										<Text text="{externalCodeNav/defaultFullName}"/>
-										<Text text="{cust_question01}"/>
-										<Text text="{cust_question02}"/>
-										<Text text="{cust_question03}"/>
-										<Text text="{cust_question04}"/>
-									</cells>
-								</ColumnListItem>
-							</items>
-						</Table>
-						
-					</content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="table01" noDataText="{i18n>noData}" items="{path:'/cust_questionarioG3',parameters:{expand:'externalCodeNav'}}">
+						<columns>
+							<Column>
+								<header><Label text="ID"/></header>
+							</Column>
+							<Column>
+								<header><Label text="Nome"/></header>
+							</Column>
+							<Column>
+								<header><Label text="Q1"/></header>
+							</Column>
+							<Column>
+								<header><Label text="Q2"/></header>
+							</Column>
+							<Column>
+								<header><Label text="Q3"/></header>
+							</Column>
+							<Column>
+								<header><Label text="Q4"/></header>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{externalCode}"/>
+									<Text text="{externalCodeNav/defaultFullName}"/>
+									<Text text="{cust_question01}"/>
+									<Text text="{cust_question02}"/>
+									<Text text="{cust_question03}"/>
+									<Text text="{cust_question04}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
 </mvc:View>
