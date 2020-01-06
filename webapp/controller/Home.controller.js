@@ -1,10 +1,12 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
+sap.ui.define([
+	"sap/ui/core/mvc/Controller"
+], function (Controller) {
 	"use strict";
+
 	return Controller.extend("g3.G3.controller.Home", {
+
 		onInit: function () {},
-		/**
-		 *@memberOf g3.G3.controller.Home
-		 */
+
 		action: function (oEvent) {
 			var that = this;
 			var actionParameters = JSON.parse(oEvent.getSource().data("wiring").replace(/'/g, "\""));
@@ -36,5 +38,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 				}
 			}
 		}
+
 	});
 });

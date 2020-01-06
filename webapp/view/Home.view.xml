@@ -4,13 +4,6 @@
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-						<Toolbar class="sapContrastPlus" width="100%" id="toolbar01">
-						    <content>
-						        <Button xmlns="sap.m" text="Home" id="button01"/>
-						        <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Gestor" id="button02" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Gestor'\}\}\}"/>
-						        <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Colaborador" id="button03" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Colaborador'\}\}\}"/>
-						    </content>
-						</Toolbar>
 						<List id="list01" noDataText="{i18n>noData}" items="{path:'/cust_questionarioG3',parameters:{expand:'externalCodeNav'}}">
 							<items>
 								<StandardListItem type="Navigation" title="{externalCodeNav/defaultFullName}"/>
